@@ -3,6 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/split-type"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -30,43 +31,64 @@
     </div>
   </div>
 
+  <div>
   <!-- Introduction: padding for internal spacing -->
-  <div class="flex flex-col pr-12 pl-12 p-8">
-    <div class="">
-      <h1 class="text-8xl font-bold mb-2">Hi! I'm Honniel</h1>
-      <h3 class="text-4xl font-bold mb-2">Computer Engineering Student</h3>
-
-      <div class="flex flex-col space-y-4">
-        <div class="group cursor-pointer">
-          <div class="flex items-center bg-white rounded-lg">
-            <span class="transform transition-transform duration-700 group-hover:rotate-90 pl-2">➜</span>
-            <h4 class="text-2xl pl-2 ">Learn more about me</h4>
+  <div class="flex flex-col p-2">
+    <div class="flex flex-col">
+      <div class="flex flex-row items-start justify-center">
+        <div class="flex flex-col m-6 justify-start ">
+          <div class="flex flex-row">
+            <h1 id="animate" class="text-8xl font-bold mb-2">Hi! I&apos;m</h1>
+            <h1 id="fullname" class="text-8xl font-bold mb-2">Honniel</h1>
           </div>
-          <div class="max-h-0 overflow-hidden bg-white rounded-lg shadow-lg group-hover:max-h-[200px] transition-all duration-700 ease-in-out">
-            <div class="p-6">
-              <h5 class="text-xl font-semibold mb-3">About Me</h5>
-              <p class="text-gray-600 mb-2">I'm a passionate Computer Engineering student with a keen interest in software development and technology.</p>
-              <p class="text-gray-600">I love building things that make a difference and am always eager to learn new technologies.</p>
+          <h3 class="text-4xl font-bold mb-2">Computer Engineering Student</h3>
+          <div class="group cursor-pointer bg-white rounded-lg p-4 hover:shadow-lg transition-all duration-700">
+            <div class="flex items-center">
+              <span class="transform transition-transform duration-700 group-hover:rotate-90 pl-2">➜</span>
+              <h4 class="text-xl pl-2">Learn more about me</h4>
+              <a href="https://github.com/dCodeHM" class="ml-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-600 transition-all duration-700">
+                View my Resume
+              </a>  
+            </div>
+
+          <div class="flex flex-col">
+            <div class="max-h-0 group-hover:max-h-[200px] overflow-hidden transition-all duration-700 ease-in-out">
+              <div class="pt-4">
+                <p class="text-gray-600 mb-2">I'm a passionate Computer Engineering student with a keen interest in software development and technology.</p>
+                <p class="text-gray-600">I love building things that make a difference and am always eager to learn new technologies.</p>
+              </div>
             </div>
           </div>
+          </div>
+        </div>
+        <div class="flex justify-center mb-12">
+          <div class="relative w-[32rem] h-[32rem]">
+            <img src="images/myimagesize.jpg" alt="Profile image 1" class="absolute w-full h-full object-cover rounded-2xl object-top opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="images/myimagetwosize.jpg" alt="Profile image 2" class="absolute w-full h-full object-cover rounded-2xl object-top opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="images/myimagethreesize.jpg" alt="Profile image 3" class="absolute w-full h-full object-cover rounded-2xl object-top opacity-0 transition-opacity duration-1000 ease-in-out">
+          </div>
+          <script>
+            const images = document.querySelectorAll('.relative img');
+            let currentIndex = 0;
+            
+            function showNextImage() {
+              images.forEach((img, index) => {
+                img.style.opacity = index === currentIndex ? '1' : '0';
+              });
+              currentIndex = (currentIndex + 1) % images.length;
+            }
+            
+            // Show first image immediately
+            showNextImage();
+            // Change image every 3 seconds
+            setInterval(showNextImage, 5000);
+          </script>
         </div>
       </div>
-      
     </div>
-
-    <div class="flex flex-col items-center p-8">
-      
-      <a href="https://drive.google.com/file/d/1PEVJTqng4Ez4Ofbl9vlSCEtiN0xAcjyf/view?usp=sharing">View my Resume</a>
     </div>
-  </div>
   
   <!-- Navigation: margin for spacing from other sections, padding for button -->
-  <div class="flex justify-center mb-12">
-    <a href="https://github.com/dCodeHM" class="px-6 py-3 bg-gray-800 text-white rounded">
-      View my Resume
-    </a>
-  </div>
-
   <!-- Content columns: padding inside cards, margin between sections -->
   <div class="grid grid-cols-3 gap-6 px-8 mb-12">
     <div class="bg-white p-6 rounded-lg shadow">
@@ -95,5 +117,12 @@
       </a>
     </div>
   </div>
+
+  <script>
+
+      let animate = new SplitType('#animate');
+      let fullname = new SplitType('#fullname');
+
+  </script>
 </body>
 </html>

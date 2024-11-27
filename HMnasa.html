@@ -1,4 +1,4 @@
-<html class="font-inter">
+<html class="font-onest">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,11 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Onest Font from Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Onest:wght@100..900&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         fontFamily: {
-          'inter': ['Inter', 'sans-serif'],
+          'onest': ['Onest', 'sans-serif'],
         },
       },
     }
@@ -20,7 +25,7 @@
   <title>honniel-manes</title>
 </head>
 <!-- text-[#444343] -->
-<body class="bg-[#EAEAEA] text-gray-650 font-inter">
+<body class="bg-[#EAEAEA] text-gray-650 font-onest">
 
   <!-- Navigation: margin for spacing from other sections, padding for button -->
   <div class="flex flex-col">
@@ -34,21 +39,20 @@
 
   <div>
   <!-- Introduction: padding for internal spacing -->
-  <div class="flex flex-col px-2 py-12">
+  <div class="flex flex-col px-2 pt-12 pb-4">
     <div class="flex flex-col">
       <div class="flex flex-row items-start justify-center">
-        <div class="flex flex-col m-6 justify-start ">
+        <div class="flex flex-col m-6 justify-start">
           <div class="flex flex-row">
-            <h1 id="animate" class="text-8xl font-bold mb-2 pr-6" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-">Hi! I&apos;m</h1>
-            <h1 id="fullname" class="text-8xl font-bold mb-2" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);">Honniel</h1>
+            <h1 id="animate" class="text-8xl font-bold mb-2 pr-6" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);">Hi! I&apos;m</h1>
+            <h1 id="fullname" class="text-8xl font-bold mb-2" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);">Niel</h1>
           </div>
           <h3 class="text-4xl font-bold mb-2">Computer Engineering Student</h3>
           <div class="group cursor-pointer bg-white rounded-lg p-4 hover:shadow-lg transition-all duration-700">
             <div class="flex items-center">
               <span class="transform transition-transform duration-700 group-hover:rotate-90 pl-2">➜</span>
               <h4 class="text-xl pl-2">Learn more about me</h4>
-              <a href="https://github.com/dCodeHM" class="ml-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-600 transition-all duration-700">
+              <a href="https://drive.google.com/file/d/1PEVJTqng4Ez4Ofbl9vlSCEtiN0xAcjyf/view?usp=sharing" target="_blank" class="ml-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-600 transition-all duration-700">
                 View my Resume
               </a>  
             </div>
@@ -74,12 +78,114 @@
     </div>
     </div>
 
-    <div>
+    <div class="justify-center items-center mx-8">
+      <h3 class="text-4xl font-bold text-center">"Develop a passion for learning. If you do, you will never cease to grow"</h3>
+      <br>
+      <h3 class="text-2xl font-bold text-center">- Anthony J. D'Angelo</h3>
+    </div>
 
-      <div class="flex flex-col items-center p-8 bg-gray-800 text-white">
-        <h2 class="mb-4">My Experiences so far</h2>
-        <h2 class="mb-4">Skills and Interest</h2>
+    <div>
+      <div class="w-full px-4 sm:px-6 lg:px-12 mt-8">
+        <div class="flex flex-col sm:flex-row gap-4 rounded-lg justify-between p-4 sm:p-8 bg-gray-800 text-white relative">
+          <div class="section flex-1 flex flex-col transform transition-all duration-300 p-4 bg-gray-700 rounded-md hover:flex-[2] group overflow-hidden" 
+               onmouseenter="expandSection(this)" 
+               onmouseleave="collapseSection(this)"
+               data-position="0">
+            <div class="section-content flex flex-col transition-all duration-500">
+              <h2 class="mb-4 text-xl font-bold transition-all duration-300 py-2 group-hover:text-2xl">My Experiences so far</h2>
+              <p class="transition-all duration-500 opacity-0 max-h-0 group-hover:max-h-[500px] group-hover:opacity-100">I started my journey as a Computer Engineering Student in 2020 where the global epidemic also occured &lpar;COVID 19&rpar; 
+                but that did not stop me from learning and growing as a student and as a person. My specialization is Software Development 
+                where I have learned to create and develop software applications, Implement and design websites, IoT's Projects, smart and 
+                hardware applications, robotics, data analysis and visualization and more. This is just a small glimpse of my journey as a developer 
+                and I am always eager to learn and grow to have a better future for me and for everyone.</p>
+            </div>
+          </div>
+          <div class="section flex-1 flex flex-col transform transition-all duration-300 p-4 bg-gray-700 rounded-lg hover:flex-[2] group overflow-hidden"
+               onmouseenter="expandSection(this)"
+               onmouseleave="collapseSection(this)"
+               data-position="1">
+            <div class="section-content flex flex-col transition-all duration-500">
+              <h2 class="mb-4 text-xl font-bold transition-all duration-300 py-2 group-hover:text-2xl">Skills and Interest</h2>
+              <p class="transition-all duration-500 opacity-0 max-h-0 group-hover:max-h-[500px] group-hover:opacity-100">Software Development, Web Development, IoT, Robotics, Data Analysis and Visualization, Hardware, and more.</p>
+            </div>
+          </div>
+          <div class="section flex-1 flex flex-col transform transition-all duration-300 p-4 bg-gray-700 rounded-lg hover:flex-[2] group overflow-hidden"
+               onmouseenter="expandSection(this)"
+               onmouseleave="collapseSection(this)"
+               data-position="2">
+            <div class="section-content flex flex-col transition-all duration-500">
+              <h2 class="mb-4 text-xl font-bold transition-all duration-300 py-2 group-hover:text-2xl">Motto and dream</h2>
+              <p class="transition-all duration-500 opacity-0 max-h-0 group-hover:max-h-[500px] group-hover:opacity-100">Always learning and growing as a person and a developer.</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <script>
+        function expandSection(element) {
+          const sections = document.querySelectorAll('.section');
+          
+          // Expand hovered section
+          gsap.to(element, {
+            flex: 2,
+            backgroundColor: '#374151',
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+
+          // Show content
+          const content = element.querySelector('p');
+          gsap.to(content, {
+            opacity: 1,
+            maxHeight: '500px',
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+
+          // Handle other sections
+          sections.forEach(section => {
+            if (section !== element) {
+              gsap.to(section, {
+                flex: 0.5,
+                opacity: 0.5,
+                duration: 0.3,
+                ease: 'power2.out'
+              });
+
+              // Hide content of other sections
+              const otherContent = section.querySelector('p');
+              gsap.to(otherContent, {
+                opacity: 0,
+                maxHeight: 0,
+                duration: 0.3,
+                ease: 'power2.out'
+              });
+            }
+          });
+        }
+
+        function collapseSection(element) {
+          const sections = document.querySelectorAll('.section');
+          
+          sections.forEach(section => {
+            gsap.to(section, {
+              flex: 1,
+              opacity: 1,
+              backgroundColor: '#374151',
+              duration: 0.3,
+              ease: 'power2.out'
+            });
+
+            const content = section.querySelector('p');
+            gsap.to(content, {
+              opacity: 0,
+              maxHeight: 0,
+              duration: 0.3,
+              ease: 'power2.out'
+            });
+          });
+        }
+      </script>
 
     </div>
   
@@ -101,13 +207,13 @@
   </div>
 
   <!-- Footer: padding for internal spacing -->
-  <div class="flex flex-col items-center p-8 bg-gray-800 text-white">
+  <div class="flex flex-col items-center p-8 bg-gray-800 text-white rounded-t-[6rem]">
     <h2 class="mb-4">Footer</h2>
     <div class="flex gap-4">
-      <a href="https://www.linkedin.com/in/honnielmanes/">
+      <a href="https://www.linkedin.com/in/honnielmanes/" target="_blank">
         <img src="images/linkedin-circle.svg" alt="PersonalLinkedIn" class="w-8 h-8">
       </a>
-      <a href="https://github.com/dCodeHM">
+      <a href="https://github.com/dCodeHM" target="_blank">
         <img src="images/github-mark-white.svg" alt="HMVercel" class="w-8 h-8">
       </a>
     </div>
